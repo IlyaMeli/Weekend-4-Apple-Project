@@ -1,9 +1,32 @@
-* {
+@import "./fonts.css";
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 100;
+  src: local("☺"),
+    url("/wss/fonts/SF-Pro-Display/v3/sf-pro-display_ultralight.woff2")
+      format("woff2"),
+    url("/wss/fonts/SF-Pro-Display/v3/sf-pro-display_ultralight.woff")
+      format("woff"),
+    url("/wss/fonts/SF-Pro-Display/v3/sf-pro-display_ultralight.ttf")
+      format("truetype");
+  /* (C) 2019 Apple Inc. All rights reserved.
+ */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
 .nav-wapper {
   display: flex;
-  width: 100vw;
+  /* width: 100vw; */
   flex-direction: column;
   position: relative;
 }
@@ -11,19 +34,58 @@
   width: 100vw;
   height: 45px;
   background: #000000cc;
-  color: green;
   top: 0;
   position: fixed;
   z-index: 1;
   backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
 }
 .second-nav {
   background-color: #e34140;
   height: 45px;
   width: 100%;
   position: absolute;
-  top: 46px;
+  top: 45px;
   z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+.shop-now {
+  cursor: pointer;
+}
+.shop-now:hover {
+  text-decoration: underline;
+}
+.chevron{
+  font-size:14px;
+  border:solid red 2px #000000;
+  padding:0;
+}
+.--main-nav-ul {
+  font-size: 12px;
+  display: flex;
+  width: 54%;
+  list-style: none;
+  /* border: solid 3px blue; */
+  color: #f5f5f7;
+  justify-content: space-around;
+  align-items: center;
+}
+.search-icon {
+  padding-top: 2.2px;
+}
+.--main-nav-ul > li {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.--main-nav-ul > li:hover {
+  opacity: 1;
 }
 
 .section-wrapper {
@@ -35,5 +97,45 @@
 
 .section {
   background-color: rgb(194, 194, 194);
-  height: 80vh;
+  height: 83vh;
+}
+.--section-1{
+  background-color:#eaf3fc;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.--section-1-content-top{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 45%;
+  /* border:solid 4px blue */
+}
+.--section-1-content-top> img{
+  padding-top: 40px;
+  width:73px
+}
+.--content-top-title{
+  font-size:27px;
+  margin-top:20px
+}
+.--content-top-sub-title{
+  font-size:21px;
+  padding-top:20px;
+  padding-bottom:20px;
+  color:#0066cc;
+
+
+}
+.--section-1-content-bottom{
+  /* border:solid 3px red; */
+  display: flex;
+  /* height:50%; */
+  width:63%;
+  justify-content: space-between;
+}
+.iphone-hero{
+  width:380px;
 }
